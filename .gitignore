@@ -40,4 +40,6 @@
 .#*
 \#*#
 *~
+/.idea
 
+/cmake-build-*

@@ -311,14 +311,14 @@ if (ENABLE_HTTP_TESTS)
 endif()
 
 
-option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+# option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 
 if (CMAKE_C_COMPILER_ID MATCHES "MSVC")
 	message(STATUS "CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS")
 	set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON) # set before add_library
 endif()
 
-add_library(gmssl ${src})
+add_library(gmssl STATIC ${src})
 
 
 if (WIN32)
